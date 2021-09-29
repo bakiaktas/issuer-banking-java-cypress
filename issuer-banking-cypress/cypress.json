@@ -1,0 +1,53 @@
+{
+  "env": {
+    "account": {
+      "accountId": 9834,
+      "notExistingAccountId": 1,
+      "notPositiveAccountId": 0,
+      "balance": 456.45
+    },
+    "transaction": {
+      "reqDto": {
+        "transactionId": "",
+        "messageType": "PAYMENT",
+        "accountId": 4755,
+        "origin": "VISA",
+        "amount": 10
+      }
+    },
+    "error": {
+      "code": {
+        "entityNotFound": "1002",
+        "paymentAmountNotValid": "1004",
+        "paymentTransactionIdNotValid": 1005
+      },
+      "reason": {
+        "entityNotFound": "ENTITY_NOT_FOUND",
+        "notValid": "NOT_VALID"
+      },
+      "message": {
+        "entityNotFound": "Account not found with by id: %s",
+        "paymentAmountNotValid": "Payment amount must be positive!",
+        "paymentTransactionIdNotValid": "Transaction id must be null for payment!"
+      }
+    },
+    "httpStatus": {
+      "ok": 200,
+      "notFound": 404
+    }
+  },
+  "baseUrl": "http://localhost:8080",
+  "watchForFileChanges": true,
+  "viewportWidth": 800,
+  "viewportHeight": 600,
+  "waitForAnimations": true,
+  "animationDistanceThreshold": 20,
+  "defaultCommandTimeout": 5000,
+  "execTimeout": 60000,
+  "pageLoadTimeout": 60000,
+  "responseTimeout": 30000,
+  "requestTimeout": 30000,
+  "video": false,
+  "integrationFolder": "cypress/api",
+  "failOnStatusCode": false
+}
